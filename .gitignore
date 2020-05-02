@@ -1,0 +1,10 @@
+/.ipynb_checkpoints/
+/.ebextensions/
+/myapp/.ipynb_checkpoints/
+/myapp/data/
+/myapp/out_video/
+/myapp/static/.ipynb_checkpoints
+/myapp/static/nltk_data/
+/myapp/static/outputs/
+/myapp/templates/.ipynb_checkpoints
+/.idea/

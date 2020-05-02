@@ -1,0 +1,76 @@
+{% extends "material/base.html" %}
+{% import "material/utils.html" as util %}
+{% import "material/wtf.html" as wtf %}
+
+{% block title %}Text2Image{% endblock %}
+
+{% block head %}
+{{super()}}
+<link rel="shortcut icon" href="../static/favicon.ico">
+<link rel="icon" href="../static/favicon.ico">
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="../static/additional_style.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12 l12">
+                {{ util.card('Text2Image', wtf.quick_form(form, button_map={'submit':"waves-effect waves-light btn-medium"} )) }}
+        </div>
+
+
+        <!--<div class="col s12 m12 l12">
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+        </div>-->
+
+        {% if generated_img_fp %}
+        <div class="col s12 m6 l6">
+            <div class="card">
+                <div class="card-content">
+                    <img width="400" src={{ generated_img_fp }} id="image" alt="User Image">
+                </div>
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if generated_vid_fp %}
+            <div class="col s12 m6 l6">
+              <div class="card">
+                  <div class="card-content">
+                      <video width="400" autoplay loop id="video">
+                          <source src={{ generated_vid_fp }} type="video/mp4">
+                          Your browser does not support the .mp4 video tag.
+                      </video>
+                  </div>
+              </div>
+            </div>
+        {% else %}
+        {% endif %}
+
+        {% if generated_img_fp %}
+        <div class="col s12 m12 l12">
+            <div class="card">
+                <div class="card-content">
+                    <p id="artist">You & AI</p>
+                    <p id="caption">{{caption}}, 2020</p>
+                    <p>GAN on html</p>
+                    <p>Model trained with MsCOCO data</p>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}

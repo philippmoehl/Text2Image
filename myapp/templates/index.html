@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>Tell me, what shall I draw for you?</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+            <!--enctype – <form> enctype attribute. If None, will automatically be set to multipart/form-data if a FileField is present in the form.-->
+        </div>
+
+        <!--<div class="col-mt-4 col-md-4">
+        <a class="btn btn-primary" href="/download/{{processed_image_filename}}" role="button">Download processed image</a>
+        </div> -->
+    </div>
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <h1>Generated Image</h1>
+            {% if generated_img_fp %} <img src={{ generated_img_fp }} class="img-responsive" alt="Upload your image">
+            {% else %} <img src="static/example_images/an_abstract_art_painting_hanging_in_a_gallery_s3.png"  class="img-responsive" alt="Upload your image">
+            {% endif %}
+
+        </div>
+
+
+
+    </div>
+
+{% endblock %}

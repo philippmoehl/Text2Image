@@ -1,0 +1,19 @@
+.card{text-align: center;}
+
+#image,video {width: 400px;}
+
+.form-control{text-align: center;}
+
+.btn {background-color: #ee6e73;;
+	color: white;}
+
+#artist {
+	font-style: italic;
+}
+#caption {
+	font-weight: bold;
+}
+p{
+	font-size: 24px;
+	font-weight: 300
+}
