@@ -3,7 +3,7 @@ pandas==1.0.3
 requests==2.23.0
 python-dateutils==2.8.1
 easydict==1.9
-Flask==1.1.2
+Flask==2.3.2
 Flask-Material==0.1.1
 Flask-WTF==0.14.2
 imageio==2.8.0
