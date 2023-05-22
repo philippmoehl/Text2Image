@@ -1,6 +1,6 @@
 numpy==1.15.4
 pandas==1.0.3
-requests==2.23.0
+requests==2.31.0
 python-dateutils==2.8.1
 easydict==1.9
 Flask==1.1.2
